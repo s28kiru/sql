@@ -166,3 +166,9 @@ select department, sum(salary) from worker group by department;
 
 # Q-50. Write An SQL Query To Fetch The Names Of Workers Who Earn The Highest Salary.
 select first_name from worker where salary = (select max(salary) from worker);
+
+# city with largest population
+select name from city where population = (select max(population) from city);
+select name from city order by population desc limit 1;
+
+select name from city where population = (select max(population) from city where population < (select max(population) from city));

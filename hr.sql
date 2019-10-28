@@ -1,0 +1,9 @@
+
+create database hr;
+use hr;
+CREATE TABLE countries(
+  COUNTRY_ID varchar(2) NOT NULL,
+  COUNTRY_NAME varchar(40) DEFAULT NULL,
+  REGION_ID decimal(10,0) DEFAULT NULL,
+  PRIMARY KEY (COUNTRY_ID),
+  KEY COUNTR_REG_FK (REGION_ID);
